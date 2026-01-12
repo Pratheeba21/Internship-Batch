@@ -2,34 +2,66 @@
 <html>
     <head>
         <title>TODO LIST APP</title>
-        <style>
-           /* 
-           selector{
-           property : value;
-           }
-            */
-
-            li{
-                color: red;
-            }
-            .class123{
-                color: green;
-            }
-            #id123{
-                color: blue;
+        <!-- <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
             }
 
-        </style>
+            body{
+               display: flex;
+               justify-content: center;
+            }
+
+            .container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 400px;
+                height: 400px;
+                background-color:rgb(248, 164, 238);
+                flex-wrap: wrap;
+                padding: 18px;
+                margin-top: 100px;
+                border-style: solid;
+                border-radius: 20px;
+                gap: 2px;
+            }
+
+            #head{
+                width: 100%;
+                margin-top: 8px;
+                text-align: center;
+                
+            }
+
+            #inp{
+                width: 100%;
+                border-radius: 10px;
+                height: 30px;
+
+            }
+
+            #add_button{
+                width: 100%;
+                border-radius: 10px;
+                height: 30px;
+                background-color: darkorchid;
+                border-style: solid;
+                border-color: aliceblue;
+            }
+        </style> -->
     </head>
     <body>
-        <h1 id="id123">WELCOME</h1>
-        <input type="text" placeholder="Add a task">
-        <button>Add the task</button>
-        <ul>
-            <li id="id123">Yoga</li>
-            <li>Drink water</li>
-            <li>Study</li>
+        <div class="container">
+        <h1 id="head">Add your tasks</h1>
+        <input type="text" placeholder="Add a task" id="inp">
+        <button id="add_button">Add the task</button>
+        <ul id="task_list">
+            <!-- run-button-application (run) - display (run)-->
         </ul>
+        </div>
     </body>
 </html>
 
