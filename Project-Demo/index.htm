@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>TODO LIST APP</title>
-        <!-- <style>
+        <style>
             *{
                 margin: 0;
                 padding: 0;
@@ -10,52 +10,64 @@
             }
 
             body{
-               display: flex;
-               justify-content: center;
-            }
-
-            .container{
+                height: 100vh;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 400px;
-                height: 400px;
-                background-color:rgb(248, 164, 238);
-                flex-wrap: wrap;
-                padding: 18px;
-                margin-top: 100px;
-                border-style: solid;
-                border-radius: 20px;
-                gap: 2px;
+                background-color: white;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             }
 
-            #head{
-                width: 100%;
-                margin-top: 8px;
+            .container{
+                width: 400px;
+                padding: 20px;
+                background-color: rgb(201, 141, 204);
+                border-radius: 25px;
+            }
+
+            h1{
                 text-align: center;
-                
+                margin-bottom: 15px;
+                color: rgb(92, 3, 92);
             }
 
             #inp{
                 width: 100%;
-                border-radius: 10px;
-                height: 30px;
-
+                padding: 8px;
+                margin-bottom: 15px;
+                border-radius: 15px;
+                border-style: none;
             }
 
             #add_button{
                 width: 100%;
-                border-radius: 10px;
-                height: 30px;
-                background-color: darkorchid;
-                border-style: solid;
-                border-color: aliceblue;
+                padding: 8px;
+                border-radius: 15px;
+                border-style: none;
+                background-color: darkmagenta;
+                color: white;
+                cursor: pointer;
             }
-        </style> -->
+
+            #add_button:hover{
+                background-color: rgb(204, 41, 229);
+            }
+
+            #task_list{
+                list-style: none;
+                margin-top: 15px;
+            }
+
+            li{
+                
+                margin-top: 15px;
+            }
+            
+        </style>
     </head>
     <body>
         <div class="container">
-        <h1 id="head">Add your tasks</h1>
+        <h1 >Add your tasks</h1>
         <input type="text" placeholder="Add a task" id="inp">
         <button id="add_button">Add the task</button>
         <ul id="task_list">
