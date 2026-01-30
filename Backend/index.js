@@ -17,13 +17,30 @@ mongoose
     console.log(err);
   });
 
-app.get("/", (req, res) => {});
+app.get("/todos", async (req, res) => {
+  const todoget = await Todo.find();
+  res.json(todoget);
+});
 
-app.post("/", (req, res) => {});
+app.post("/todos", async (req, res) => {
+  const todopost = new Todo({ userTask: req.body.userTask });
+  await todopost.save();
+  res.json(todopost);
+});
 
-app.put("/", (req, res) => {});
+app.put("/todos/:id", async (req, res) => {
+  const todoput = await Todo.findByIdAndUpdate(
+    req.params.id,
+    { complete: req.body.complete },
+    { new: true },
+  );
+  res.json(todoput);
+});
 
-app.delete("/", (req, res) => {});
+app.delete("/todos/:id", async (req, res) => {
+  await Todo.findByIdAndDelete(req.params.id);
+  res.json({ message: "Deleted" });
+});
 
 app.listen(3000, () => {
   console.log("Server started, and running in port 3000");
