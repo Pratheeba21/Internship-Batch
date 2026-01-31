@@ -4,7 +4,7 @@ const add_button = document.getElementById("add_button");
 
 const task_list = document.getElementById("task_list");
 
-const API_URL = "http://localhost:3000/todos";
+const API_URL = "https://backend-todo-63d8.onrender.com/todos";
 
 window.addEventListener("DOMContentLoaded", function(){
   fetch(API_URL)
