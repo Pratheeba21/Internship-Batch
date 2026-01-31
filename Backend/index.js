@@ -10,7 +10,8 @@ app.use(express.json());
 
 mongoose
   .connect(
-    "mongodb+srv://pratheeba: RLT4wTYZpkNu.N3@cluster0.fohthru.mongodb.net/?appName=Cluster0")
+    "mongodb+srv://pratheeba: RLT4wTYZpkNu.N3@cluster0.fohthru.mongodb.net/?appName=Cluster0/todoapps"
+  )
   .then(() => {
     console.log("MongoDB Connected");
   })
