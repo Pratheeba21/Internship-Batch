@@ -9,7 +9,8 @@ app.use(cors());
 app.use(express.json());
 
 mongoose
-  .connect("mongodb://localhost:27017/todoapps")
+  .connect(
+    "mongodb+srv://pratheeba: RLT4wTYZpkNu.N3@cluster0.fohthru.mongodb.net/?appName=Cluster0")
   .then(() => {
     console.log("MongoDB Connected");
   })
@@ -42,6 +43,8 @@ app.delete("/todos/:id", async (req, res) => {
   res.json({ message: "Deleted" });
 });
 
-app.listen(3000, () => {
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
   console.log("Server started, and running in port 3000");
 });
