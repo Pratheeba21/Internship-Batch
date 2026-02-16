@@ -11,7 +11,8 @@ window.addEventListener("DOMContentLoaded", function(){
   .then((res) => res.json())
   .then( (tasks) => tasks.forEach(task => {
     create_task_list(task.userTask, task.complete, task._id);
-  }) );
+  }), 
+);
 });
 
 add_button.addEventListener("click", function () {
