@@ -10,7 +10,7 @@ app.use(express.json());
 
 mongoose
   .connect(
-    "mongodb+srv://Pratheeba:PratheebaMongoDBAtlas@cluster0.fohthru.mongodb.net/todoapps?appName=Cluster0",
+    "mongodb+srv://Pratheeba:PratheebaMongoDBAtlas@cluster0.ixnufht.mongodb.net/todoapps?appName=Cluster0",
   )
   .then(() => {
     console.log("MongoDB Connected");
@@ -19,6 +19,7 @@ mongoose
     console.log(err);
   });
 
+  // mongodb+srv://Pratheeba:PratheebaMongoDBAtlas@cluster0.ixnufht.mongodb.net/todoapps?appName=Cluster0
 app.get("/todos", async (req, res) => {
   const todoget = await Todo.find();
   res.json(todoget);
