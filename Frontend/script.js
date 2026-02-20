@@ -75,14 +75,19 @@ function create_task_list(task_text,task_status,task_id) {
     });
 
   delete_btn.addEventListener("click", function () {
+    fetch(API_URL + "/" + task_id, {
+      method: "DELETE",
+    }).then(() => {
+      // Add a closing animation before removing
+      list_item.style.transform = "translateX(50px)";
+      list_item.style.opacity = "0";
 
-    fetch(API_URL + "/" + task_id,{
-      method:"DELETE"
-    })
-    .then( () => {
-      task_list.removeChild(list_item);
-    })
+      setTimeout(() => {
+        task_list.removeChild(list_item);
+      }, 300); // Matches the transition time
+    });
   });
+
 
   list_item.appendChild(complete_btn);
   list_item.appendChild(task_span);
