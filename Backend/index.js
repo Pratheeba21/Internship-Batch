@@ -19,8 +19,7 @@ mongoose
     console.log(err);
   });
 
-  // mongodb+srv://Pratheeba:PratheebaMongoDBAtlas@cluster0.ixnufht.mongodb.net/todoapps?appName=Cluster0
-app.get("/todos", async (req, res) => {
+ app.get("/todos", async (req, res) => {
   const todoget = await Todo.find();
   res.json(todoget);
 });
